@@ -85,8 +85,6 @@ missingness_rules = [
     }
 ]
 
-modified_iris_df = advanced_missingness(data.copy(), missingness_rules)
-modified_iris_df.head(20)
 
 """##Seqeuntial missingness
 importance of simulating realistic missingness patterns that often occur in longitudinal studies or medical experiments. In such datasets, missingness isn't random but follows certain patterns due to the nature of the study or participant responses. Here are key points from your supervisor's guidance:
@@ -103,11 +101,6 @@ def apply_mnar(df, start_col, prob_missing=0.1, prob_continuation=0.8):
                 if np.random.rand() > prob_continuation:
                     break
     return df
-
-
-df_with_missingness = apply_mnar(data.copy(), 'sepal_length')
-df_with_missingness.head(20)
-
 
 def generate_synthetic_iris(size=150):
     # generate features, standard deviations and means
@@ -128,10 +121,6 @@ def generate_synthetic_iris(size=150):
 
     return synthetic_iris
 
-
-synthetic_iris = generate_synthetic_iris()
-
-synthetic_iris.head(20)
 
 
 def generate_synthetic_dataset(original_df):
