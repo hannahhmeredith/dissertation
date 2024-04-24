@@ -6,7 +6,6 @@ from sklearn.decomposition import PCA
 from scipy.stats import gaussian_kde
 
 column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
-data = pd.read_csv('iris/iris.data', header=None, names=column_names)
 
 """basic missing data generation function randomly assigns missing values without following a specific structural pattern.
 """
@@ -28,9 +27,6 @@ def apply_mcar(df, column_name, missing_percentage):
 column_name = 'sepal.length'
 missing_percentage = 0.1
 
-data_with_missing = apply_mcar(data.copy(), column_name, missing_percentage)
-
-data_with_missing.head(10)
 
 """Structural Missing Data Generation designed to introduce missing values based on a condition applied to a column. For example, you can make 'petal_length' missing in 40% of cases where 'petal_length' is greater than 1.5.
 """
