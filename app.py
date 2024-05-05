@@ -100,7 +100,6 @@ def apply_missingness(df, start_col, selected_type, selected_percentage):
             for column in df.columns:
                 if column != condition_column:
                     df = apply_mar(df, condition_column, condition, column, selected_percentage)
-            df = apply_mar(df, condition_column, condition, start_col, selected_percentage)
     elif selected_type == 'MNAR':
         prob_missing = selected_percentage
         prob_continuation = 0.8
