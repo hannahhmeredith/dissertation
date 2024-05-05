@@ -96,12 +96,10 @@ def apply_missingness(df, start_col, selected_type, selected_percentage):
     elif selected_type == 'MAR':
         condition = lambda x: x > 3.0
         condition_column = 'sepal.length'
-        df = apply_mar(df, condition_column, condition, condition_column, selected_percentage)
         if start_col == all_columns_option:
             for column in df.columns:
                 if column != condition_column:
                     df = apply_mar(df, condition_column, condition, column, selected_percentage)
-        else:
             df = apply_mar(df, condition_column, condition, start_col, selected_percentage)
     elif selected_type == 'MNAR':
         prob_missing = selected_percentage
