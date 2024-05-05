@@ -21,26 +21,20 @@ in exploring various missingness mechanisms and their impacts on data.""")
 
 with st.expander("Click here for instructions on how to use this tool"):
     st.markdown("""#### How to Use This Tool:
-
 1. **Upload Your Dataset**:
    - Use the sidebar to upload a CSV file. Please ensure your file is properly formatted with headers for each column.
    - If you do not have a dataset ready, you can use the example dataset provided by clicking on the link in the sidebar.
-
 2. **Select Missingness Type**:
    - Choose one of the three types of missingness mechanisms to apply to your data:
      - **MCAR (Missing Completely at Random):** Data is missing randomly, and the missingness does not depend on any other data points.
      - **MAR (Missing at Random):** Data is missing in a way that relates to the observed data but not the missing data itself.
      - **MNAR (Missing Not at Random):** Missingness is related to the unobserved data, meaning the reason data is missing could depend on the missing data itself.
-
 3. **Specify the Percentage of Missingness**:
    - Adjust the slider to set the percentage of the data you wish to be missing according to the selected mechanism.
-
 4. **Choose the Start Column for Missingness**:
    - Select a specific column or 'All Columns' to apply the missingness. This selection defines where the missingness starts or is applied across all columns.
-
 5. **Generate Missingness**:
    - Click the 'Generate Missingness' button to apply the selected missingness type and percentage to the uploaded or example dataset.
-
 6. **Visualise Missingness Patterns**:
    - After generating missingness, choose from various visualisation methods to explore the missing data patterns:
      - **Heatmap:** Visualize the distribution and frequency of missing values across your dataset.
@@ -48,15 +42,12 @@ with st.expander("Click here for instructions on how to use this tool"):
      - **Box Plots**: Assess the central tendency and dispersion of data, which can reveal the impact of missingness on the dataset's distribution.
      - **Correlation Matrix**: Understand how missingness may be influencing the relationships between variables by observing changes in correlation patterns.
      - **Parallel Coordinates**: Detect patterns and potential correlations across multiple dimensions of the data, aiding in the detection of MNAR (Missing Not at Random) data patterns.
-
 7. **Customise Your View**:
    - Use the multiselect dropdown to choose which visualisations you wish to see displayed below the dataset. You can select or deselect visualisations according to your needs.
-
 #### Tips for Better Insights:
 - Analyse the impact of different missingness types on your data analysis.
 - Use the visualisations to identify patterns that might indicate biases or potential issues in data collection or handling processes.
 - Experiment with different percentages of missingness to see how robust your data analysis methods are against the varying degrees of incompleteness.
-
 Thank you for using the Missingness Prototype. Explore, visualise, and gain deeper insights into your data's missingness patterns!
 """)
 
@@ -67,18 +58,13 @@ with st.expander('Learn About Synthetic Data'):
     especially useful in situations where privacy is a concern, or the original data cannot be shared due to 
     confidentiality constraints. It allows for robust testing of data pipelines, machine learning models, 
     and statistical analyses in a secure environment. 
-
 Generating synthetic data can help in several ways:
-
 - Privacy Protection: It protects individual privacy, as the synthetic dataset does not include real individual 
 records. 
-
 - Data Availability: Synthetic datasets can be shared freely, helping overcome barriers due to data privacy 
 regulations. 
-
 - Model Training: In machine learning, synthetic data can be used to augment real datasets, improving the 
 performance of models, especially in cases where the original data may be imbalanced or sparse. 
-
 - Testing and Development: Developers and analysts can use synthetic data to test their systems, algorithms, or analysis workflows 
 without the risk of data misuse or exposure. The included synthetic data generation feature allows you to create a 
 full dataset based on the statistical characteristics of either the uploaded dataset or a sample dataset provided. 
